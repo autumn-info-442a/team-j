@@ -1,2 +1,2 @@
 # team-j
-INFO 442 Team J
+INFO 442 Team Jigsaw
