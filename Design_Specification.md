@@ -17,7 +17,7 @@ Our solution centers around creating visualizations that hone in on one or two s
 The overall website is split into two sections: one for health insights and another for economic insights. The top navigation bar allows users to switch between these two pages by clicking on the button associated with the page that they would like to view. 
 
 ### 1. Infection Timeline Slider
-![Infection Timeline](/img/infection_timeline.png"Infection Timeline")
+![Infection Timeline](/img/infection_timeline.png "Infection Timeline")
 For the top graph on the health effects page, users can drag the slider across the ‘infection timeline’ for both the mild and severe instances, which will elicit a label above the slider that they drag. The label contains information about both the point in time for an infection type, as well as how severe symptoms are for the infected individual. The color scheme of the lines are meant to help users recognize severity at a glance if they do not want to interact with the sliders. Users can drag the sliders back and forth, but the two sliders cannot be dragged at the same time and they are independent of each other. 
 
 ### 2. Mortality Rate by Demographic Bar Graph
@@ -27,19 +27,19 @@ Scrolling down, users will see a fairly general mortality rate by demographic ho
 For the graph’s content, the x-axis contains categories for the selected demographic and the y-axis represents the percentage of recorded deaths. The default demographic is age, and will be divided into categories as follows: <1, 1-4, 5-14, 15-24, 25-34, etc until 85, at which point the ages will be treated as one grouping. A dropdown menu, placed on the top left of the graph, can be used to select either Sex or Race as other demographic groupings. Sex will only contain male and female, as the provided CDC data makes no additional differentiations. Sorting by Race uses the following categories, as per the CDC data: White, Hispanic, Black, Asian, Other, American Indian or Alsakan Native. All bars present on the graph can be hovered for details as described above.
 
 ### 3. Lasting Effects by Pre-Existing Health Conditions Waffle Chart
-![Lasting Effects by Pre-Existing Health Conditions Waffle Chart](/img/lasting_effects.png"Lasting Effects by Pre-Existing Health Conditions Waffle Chart")
+![Lasting Effects by Pre-Existing Health Conditions Waffle Chart](/img/lasting_effects.png "Lasting Effects by Pre-Existing Health Conditions Waffle Chart")
 To the left of the mortality rate by demographic chart, users can similarly interact with a waffle chart that depicts the percentage of people who recover or fail to recover from Covid. Users can access a drop down menu on the top left to sort between different pre-existing categorical groupings, notably hypertension, obesity, psychiatric condition, and immunosuppressive condition. We extracted this list through a CDC article, and decided to only use categories that had a significant p-value, so not all categories in the CDC article are included. The sections of the chart can also be hovered to show their exact numbers. 
 
 ### 4. Covid-19 Relief Spent By Country Bar Graph
-![Covid-19 Relief Spent By Country Bar Graph](/img/covid_relief.png"Covid-19 Relief Spent By Country Bar Graph")
+![Covid-19 Relief Spent By Country Bar Graph](/img/covid_relief.png "Covid-19 Relief Spent By Country Bar Graph")
 Clicking on the economic effects button in the navigation bar will take users to a page that contains visualizations for a few key insights into the economic effects of Covid-19. The first graph users will see is a horizontal bar graph concerning how much a handful of countries have spent for Covid-19 relief as a percentage of their overall GDP, according to the BBC. Hovering over a bar shows a label that gives the specific percentage of spending as a percentage of the country’s GDP. When users move their mouse away from the bar, the hovered label will disappear as well.
 
 ### 5. US Budget Breakdown Single Bar Chart
-![US Budget Breakdown Single Bar Chart](/img/spending_countries.png"US Budget Breakdown Single Bar Chart")
+![US Budget Breakdown Single Bar Chart](/img/spending_countries.png "US Budget Breakdown Single Bar Chart")
 As users scroll down the page on the economic effects tab, there will be a horizontal, single bar chart to represent the breakdown of the United State’s Covid-19 relief spending budget. While the labels with the specific monetary metric is statically listed, users have the ability to hover over the bar to get a clearer definition as to what outlays, obligations, and unobligated mean. Similarly, the estimated lending visualization will also have definitions to explain this highly specific, and generally confusing, jargon. Hovering over will elicit a gray pop-up label, just like the other graphs featured on this website. When users move their mouse away from the particular section of the bar, the pop-up will dissolve into the background.
 
 ### 6. Job Loss Word Cloud
-![Job Loss Word Cloud](/img/job_loss.png"Job Loss Word Cloud")
+![Job Loss Word Cloud](/img/job_loss.png "Job Loss Word Cloud")
 Scrolling to the bottom of the economic effects page, users have access to a word cloud visualization that describes the different industries based on the The Urban Institute Data Catalog. At a glance, users can find out which industries have had the most layoffs and hovering over a word will elicit a pop-up label that gives a precise number of jobs lost for the hovered industry. When a user moves their mouse away from their hovered word, the statistical pop-up label will also fade. 
 
 ## Citations
