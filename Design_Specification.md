@@ -31,7 +31,7 @@ For the graph’s content, the x-axis contains categories for the selected demog
 To the left of the mortality rate by demographic chart, users can similarly interact with a waffle chart that depicts the percentage of people who recover or fail to recover from Covid. Users can access a drop down menu on the top left to sort between different pre-existing categorical groupings, notably hypertension, obesity, psychiatric condition, and immunosuppressive condition. We extracted this list through a CDC article, and decided to only use categories that had a significant p-value, so not all categories in the CDC article are included. The sections of the chart can also be hovered to show their exact numbers. 
 
 ### 4. Covid-19 Relief Spent By Country Bar Graph
-![Covid-19 Relief Spent By Country Bar Graph](/img/covid_relief.png "Covid-19 Relief Spent By Country Bar Graph")
+![Covid-19 Relief Spent By Country Bar Graph](/img/spending_us.png "Covid-19 Relief Spent By Country Bar Graph")
 Clicking on the economic effects button in the navigation bar will take users to a page that contains visualizations for a few key insights into the economic effects of Covid-19. The first graph users will see is a horizontal bar graph concerning how much a handful of countries have spent for Covid-19 relief as a percentage of their overall GDP, according to the BBC. Hovering over a bar shows a label that gives the specific percentage of spending as a percentage of the country’s GDP. When users move their mouse away from the bar, the hovered label will disappear as well.
 
 ### 5. US Budget Breakdown Single Bar Chart
