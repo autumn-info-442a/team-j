@@ -11,7 +11,7 @@
 - Each chart should include the number corresponding to the data source used from the numbered reference list.  
 - All colors used for the graphs must use colorblind safe themes.
 ![Health](/img/health.png "Health")
-![Economics](/img/economics.png "Economics)
+![Economics](/img/economics.png "Economics")
 
 ### 2. Navigation Bar:
 ![Navigation Bar](/img/health_nav.png "Navigation Bar")
