@@ -30,24 +30,24 @@
 - The output is an associated description of the symptoms that an infected person would experience during the time period that correlates to the slider’s distance from the origin.
 - The Severe Infection Controller can update the Severe Infection View based on its generated input value.
 
-**Bar graph of spending on covid relief across different countries:**
+### Bar graph of spending on covid relief across different countries
 - This component is a view that accepts a dataset, and returns a horizontal bar graph visualized based on the input data. 
 - The input data is an array of objects, which each object includes two sets of key-values. The first set has a key of “Country” with a value of string specifying a country name. The second set has a key of “Spending as % of GDP” with a value of number (decimals) indicating the spending as percentage of GDP.
 - The view resides only on the client side.
 
 
-**US Covid-Relief Spending Bar Chart:**
+### US Covid-Relief Spending Bar Chart
 - This component is a view that accepts a data set and returns a single-bar bar graph based on the array that is passed in.
 - The array contains objects that contain information about the division of spending for the US Covid-relief, with two elements making up one object. One element represents the type of spending (outlays, obligations, unobligated) and the other element represents the actual monetary value itself. The type of spending is a string value, while the currency value is a double. 
 - The view only resides on the client side.
 
-**Mortality Rates Bar Chart**
+### Mortality Rates Bar Chart
 - Uses a dropdown menu controller. This dropdown menu communicates with the function described below to render the selected chart. 
 - The input is one of the options as selected by the user
 - The output is a call to the function that should create the specified chart
 - The view for this component is displayed based on the function below, selected via the dropdown menu controller as described above. 
 
-**Existing Health Conditions Waffle Chart**
+### Existing Health Conditions Waffle Chart
 - Uses a dropdown menu controller. It communicates with the function described below to render the selected waffle chart.
 - The input is one of the options as selected by the user
 - The output is a call to the function that should create the specified chart
