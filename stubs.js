@@ -1,4 +1,38 @@
-//  Job Loss Word Cloud 
+// Navigation bar
+/*
+Pre: Users will choose either of the two buttons.
+Post: Navigate users to the view associated with the chosen button.
+*/
+function render() {
+  return (
+    <div>
+      <nav>
+          // TODO: Create the health insights button
+          <Link to='/health'>Health Insights</Link>
+          // TODO: Create the health insights button
+          <Link to='/economics'>Economic Insights</Link>
+      </nav>
+      <BrowserRouter>
+        <Route path='/health' component={health_data_viz} />
+        <Route path='/economics' component={econ_data_viz} />
+      </BrowserRouter>
+    </div>
+  );
+};
+
+// Views of data visualizations(health_data_viz and econ_data_viz)
+render() {
+	// check which page the user is on
+	// grab the required visualizations from the state and assign them to be displayed
+	// save each visualization to an active state and return it in the HTML
+return (
+	<div>
+		  // visualizations here
+	</div>
+); 
+}
+
+// Job Loss Word Cloud 
 /* input data example */
 var unemployment = [{"industryName": "Manufacturing", "jobLoss": 688835}, {"industryName": "Construction", "jobLoss": 12352}]; 
 
@@ -14,7 +48,6 @@ function wordCloud(array[] unemployment) {
     render a word cloud data visualization based on the ranking created */
     return jobLossWordCloud;
 }
-
 
 // Infection Timeline Slider 
 /* 
