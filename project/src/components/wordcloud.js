@@ -26,6 +26,54 @@ class Chart extends Component {
       }, {
         "job": "Construction",
         "count": "371355"
+      }, {
+        "job": "Manufacturing",
+        "count": "688873"
+      },  {
+        "job": "Wholesale Trade",
+        "count": "321820"
+      },  {
+        "job": "Retail Trade",
+        "count": "559241"
+      },  {
+        "job": "Transportation and Warehousing",
+        "count": "355473"
+      },  {
+        "job": "Information",
+        "count": "278876"
+      },  {
+        "job": "Finance and Insurance",
+        "count": "30531"
+      },  {
+        "job": "Real Estate and Rental and Leasing",
+        "count": "113971"
+      },  {
+        "job": "Professional, Scientific, and Technical Services",
+        "count": "335271"
+      },  {
+        "job": "Management of Companies and Enterprises",
+        "count": "124490"
+      },  {
+        "job": "Administrative and Support and Waste Management and Remediation Services",
+        "count": "604653"
+      },  {
+        "job": "Educational Services",
+        "count": "1006041"
+      },  {
+        "job": "Health Care and Social Assistance",
+        "count": "1042505"
+      },  {
+        "job": "Arts, Entertainment, and Recreation",
+        "count": "810743"
+      },  {
+        "job": "Accomodation and Food Services",
+        "count": "2885761"
+      },  {
+        "job": "Other Services",
+        "count": "548929"
+      },  {
+        "job": "Public Administration",
+        "count": "266840"
       }];
 
     series.dataFields.word = "job";
