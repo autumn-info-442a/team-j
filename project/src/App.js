@@ -2,6 +2,7 @@ import './App.css';
 import React, {Component} from 'react';
 import Chart from './components/wordcloud.js'
 import Test from './components/stacked_bar_chart.js'
+import StackedChart from './components/stacked_lending.js'
 import DiscreteSlider from './components/slider.js'
 
 class App extends React.Component{
@@ -21,6 +22,9 @@ render() {
         </div>
         <div id='chartdiv'>
           <Test />
+        </div>
+        <div id ='stacked_lending'>
+          <StackedChart />
         </div>
     </div>
   );
