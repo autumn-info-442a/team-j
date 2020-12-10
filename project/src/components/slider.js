@@ -31,8 +31,6 @@ ValueLabelComponent.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-// const iOSBoxShadow =
-//   '0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.13),0 0 0 1px rgba(0,0,0,0.02)';
 
 const marks = [
   {
@@ -67,55 +65,35 @@ const marks = [
   }
 ];
 
-// const IOSSlider = withStyles({
-//   root: {
-//     color: '#3880ff',
-//     height: 2,
-//     padding: '15px 0',
-//   },
-//   thumb: {
-//     height: 28,
-//     width: 28,
-//     backgroundColor: '#fff',
-//     boxShadow: iOSBoxShadow,
-//     marginTop: -14,
-//     marginLeft: -14,
-//     '&:focus, &:hover, &$active': {
-//       boxShadow: '0 3px 1px rgba(0,0,0,0.1),0 4px 8px rgba(0,0,0,0.3),0 0 0 1px rgba(0,0,0,0.02)',
-//       // Reset on touch devices, it doesn't add specificity
-//       '@media (hover: none)': {
-//         boxShadow: iOSBoxShadow,
-//       },
-//     },
-//   },
-//   active: {},
-//   valueLabel: {
-//     left: 'calc(-50% + 12px)',
-//     top: -22,
-//     '& *': {
-//       background: 'transparent',
-//       color: '#000',
-//     },
-//   },
-//   track: {
-//     height: 2,
-//   },
-//   rail: {
-//     height: 2,
-//     opacity: 0.5,
-//     backgroundColor: '#bfbfbf',
-//   },
-//   mark: {
-//     backgroundColor: '#bfbfbf',
-//     height: 8,
-//     width: 1,
-//     marginTop: -3,
-//   },
-//   markActive: {
-//     opacity: 1,
-//     backgroundColor: 'currentColor',
-//   },
-// })(Slider);
+function mild_ValueLabelComponent(props) {
+  const { children, open, value } = props;
+  const index = mild_marks.map(function(x) {return x.value; }).indexOf(value);
+  const content = mild_marks[index].text
+  return (
+    <Tooltip open={open} enterTouchDelay={0} placement="top" title= {content}>
+      {children}
+    </Tooltip>
+  );
+}
+
+ValueLabelComponent.propTypes = {
+  children: PropTypes.element.isRequired,
+  open: PropTypes.bool.isRequired,
+  value: PropTypes.number.isRequired,
+};
+
+const mild_marks = [
+  {
+    value: 50,
+    label: "5-6 Days",
+    text: "On average it takes 5–6 days from when someone is infected with the virus for symptoms to show. Most common symptoms include fever."
+  },
+  {
+    value: 95,
+    label: "12 Days",
+    text: "People who are suffering less severe symptoms will likely see those symptoms begin to get better."
+  }
+];
 
 const PrettoSlider = withStyles({
   root: {
@@ -154,19 +132,11 @@ export default function CustomizedSlider() {
 
   return (
     <div className={classes.root}>
-      {/* <Typography gutterBottom>iOS</Typography>
-      <IOSSlider aria-label="ios slider" defaultValue={60} marks={marks} valueLabelDisplay="auto"/>
-      <div className={classes.margin} /> */}
+      <Typography gutterBottom>Mild</Typography>
+      <PrettoSlider valueLabelDisplay="auto" ValueLabelComponent={mild_ValueLabelComponent} aria-label="custom thumb label" defaultValue={50} marks={mild_marks} valueLabelDisplay="auto" step={null}/>
+      <div className={classes.margin} />
       <Typography gutterBottom>Severe</Typography>
       <PrettoSlider valueLabelDisplay="auto" ValueLabelComponent={ValueLabelComponent} aria-label="custom thumb label" defaultValue={15} marks={marks} valueLabelDisplay="auto" step={null}/>
-      {/* <div className={classes.margin} />
-      <Typography gutterBottom>Tooltip value label</Typography>
-      <Slider
-        ValueLabelComponent={ValueLabelComponent}
-        aria-label="custom thumb label"
-        defaultValue={20}
-      />
-      <div className={classes.margin} /> */}
     </div>
   );
 }
