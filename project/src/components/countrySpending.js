@@ -43,7 +43,7 @@ class countrySpending extends Component {
     }];
 
 
-    // Spcify bar color
+    // Specify bar color
     chart.colors.list = [
       am4core.color("#FBD5C5"), 
       am4core.color("#FF767C"),
@@ -87,6 +87,7 @@ class countrySpending extends Component {
     //valueLabel.label.fontWeight = "800"
     //valueLabel.label.fill = am4core.color("#fff");
 
+    // Title 
     let subtitle = chart.titles.create();
     let title = chart.titles.create();
     title.text = "Spending on COVID-19 relief across countries";

@@ -58,25 +58,44 @@ class Mortality extends Component {
     var chart = am4core.create("mortality", am4charts.XYChart);
 
     chart.data = this.state.data;
+    
+    // Specify bar color
+    chart.colors.list = [
+      am4core.color("#52C8FA"), 
+    ]; 
 
     var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
     categoryAxis.dataFields.category = "category";
     categoryAxis.renderer.grid.template.location = 0;
+    categoryAxis.renderer.grid.template.disabled = true;
+
 
     var valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
-    valueAxis.min = 0;
+    valueAxis.renderer.grid.template.disabled = true;
     valueAxis.max = 100;
 
     var series = chart.series.push(new am4charts.ColumnSeries());
     series.dataFields.valueX = "value";
     series.dataFields.categoryY = "category";
     series.columns.template.tooltipText = "Percentage of Deaths: {value}%";
+    series.tooltip.getFillFromObject = false;
+    series.tooltip.background.fill = am4core.color("#333333");
+    series.tooltip.background.filters.clear();
+    series.tooltip.background.stroke = am4core.color("#333333");
 
-    let valueLabel = series.bullets.push(new am4charts.LabelBullet());
-    valueLabel.label.text = "{value}%";
-    valueLabel.label.horizontalCenter = "left";
-    valueLabel.label.dx = 10;
-    valueLabel.label.minWidth = 1000;
+    //let valueLabel = series.bullets.push(new am4charts.LabelBullet());
+    //valueLabel.label.text = "{value}%";
+    //valueLabel.label.horizontalCenter = "left";
+    //valueLabel.label.dx = 10;
+    //valueLabel.label.minWidth = 1000;
+
+    // Title 
+    let subtitle = chart.titles.create();
+    let title = chart.titles.create();
+    title.text = "Mortality Rate by Demographics";
+    title.align = "left";
+    title.fontSize = 20;
+    title.fontWeight = "800";
 
     this.chart = chart;
   }

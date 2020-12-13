@@ -36,6 +36,7 @@ class Condition extends Component {
         var chart = am4core.create("condition", am4charts.PieChart);
 
         chart.data = this.state.data;
+        
 
         let pieSeries = chart.series.push(new am4charts.PieSeries());
         pieSeries.dataFields.value = "value";
@@ -43,11 +44,31 @@ class Condition extends Component {
         pieSeries.slices.template.stroke = am4core.color("#fff");
         pieSeries.slices.template.strokeWidth = 2;
         pieSeries.slices.template.strokeOpacity = 1;
+        pieSeries.labels.template.disabled = true;
+        pieSeries.ticks.template.disabled = true;
+
+        // Specify bar color
+        pieSeries.colors.list = [
+          am4core.color("#63AD48"),
+          am4core.color("#FF9C00")
+        ]; 
+        // Tooltip styling
+        pieSeries.tooltip.getFillFromObject = false;
+        pieSeries.tooltip.background.fill = am4core.color("#333333");
+        pieSeries.tooltip.background.filters.clear();
+        pieSeries.tooltip.background.stroke = am4core.color("#333333");
 
         pieSeries.hiddenState.properties.opacity = 1;
         pieSeries.hiddenState.properties.endAngle = -90;
         pieSeries.hiddenState.properties.startAngle = -90;
 
+        // Title 
+        let subtitle = chart.titles.create();
+        let title = chart.titles.create();
+        title.text = "Lasting effects based on pre-exisiting health conditions";
+        title.align = "left";
+        title.fontSize = 20;
+        title.fontWeight = "800";
         
         this.chart = chart;
     }
