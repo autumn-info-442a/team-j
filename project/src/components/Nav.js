@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom';
     function Nav() {
 
         const navStyle = {
-            color: 'white'
+            color: 'black'
         }
 
         return( 
-            <nav>
-                <h3>logo</h3>
-                <ul className="nav-Links">
+            <nav className="nav_bar">
+                <img src="https://i.ibb.co/QdxMM5k/covid-logo.png" alt="covid_logo"/>
+                <ul className="nav_links">
                     <Link style={navStyle} to='/health'>
                         <li>Health </li>
                     </Link>

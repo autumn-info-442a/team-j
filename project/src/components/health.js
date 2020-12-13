@@ -4,17 +4,18 @@ import DiscreteSlider from './slider.js'
 import Mortality from './mortality';
 import Condition from './condition';
 
-function health() {
+function Health() {
     return(
-        <div>
-            <p>test</p>
+        <div className="health">
             <div id='timeline_slider'>
                 <DiscreteSlider />
             </div>
-            <div><Mortality></Mortality></div>
-            <div><Condition></Condition></div>
+            <div className="health_bottom">
+                <div><Mortality></Mortality></div>
+                <div><Condition></Condition></div>
+            </div>
       </div>
     );
 }
 
-export default health;
+export default Health;

@@ -170,7 +170,7 @@ class Mortality extends Component {
 
   render() {
     return (
-      <div>
+      <div id="mortality_bar">
         <DropdownButton id="dropdown-item-button" title={this.state.selection}>
           <Dropdown.Item as="button" onClick={() => this.setAge()}>Age Group</Dropdown.Item>
           <Dropdown.Item as="button" onClick={() => this.setSex()}>Sex</Dropdown.Item>

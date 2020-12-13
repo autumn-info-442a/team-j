@@ -5,21 +5,23 @@ import StackedChart from './stacked_lending.js'
 import CountrySpending from './countrySpending';
 import Chart from './wordcloud.js'
 
-function economics() {
+function Economics() {
     return(
-     <div>
-        <div id='chartdiv'>
+     <div className="econ">
+        <div id="chartdiv">
           <Test />
         </div>
-        <div id ='stacked_lending'>
+        <div id="stacked_lending">
           <StackedChart />
         </div>
-        <div><CountrySpending></CountrySpending></div>
-        <div id='word_cloud'>
+        <div id="country_spending">
+          <CountrySpending></CountrySpending>
+        </div>
+        <div id="word_cloud">
           <Chart />
         </div>
      </div>
     );
 }
 
-export default economics;
+export default Economics;

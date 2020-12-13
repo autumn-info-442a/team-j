@@ -116,7 +116,7 @@ class Condition extends Component {
   
     render() {
       return (
-        <div>
+        <div className="condition">
           <DropdownButton id="dropdown-item-button" title={this.state.selection}>
             <Dropdown.Item as="button" onClick={() => this.setHypertension()}>Hypertension</Dropdown.Item>
             <Dropdown.Item as="button" onClick={() => this.setObesity()}>Obesity</Dropdown.Item>
