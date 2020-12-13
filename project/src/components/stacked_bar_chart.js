@@ -96,7 +96,7 @@ class Test extends Component {
   
     render() {
       return (
-        <div id="chartdiv" style={{height: "1000px" }}></div>
+        <div id="chartdiv"></div>
       );
     }
   }

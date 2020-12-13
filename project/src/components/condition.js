@@ -36,6 +36,7 @@ class Condition extends Component {
         var chart = am4core.create("condition", am4charts.PieChart);
 
         chart.data = this.state.data;
+        let total = this.state.data[1].value + this.state.data[0].value;
 
         let pieSeries = chart.series.push(new am4charts.PieSeries());
         pieSeries.dataFields.value = "value";
@@ -44,9 +45,21 @@ class Condition extends Component {
         pieSeries.slices.template.strokeWidth = 2;
         pieSeries.slices.template.strokeOpacity = 1;
 
+        pieSeries.slices.template.tooltipText = "Sample Size: {value} out of " + total + " patients ()"; 
+
         pieSeries.hiddenState.properties.opacity = 1;
         pieSeries.hiddenState.properties.endAngle = -90;
         pieSeries.hiddenState.properties.startAngle = -90;
+
+        let subtitle = chart.titles.create();
+        subtitle.text = this.state.data[1].value + "% of patients did not return to a usual state of health 14-21 \n days after testing positive for COVID-19";
+        subtitle.align = "center";
+        subtitle.fill = am4core.color("#902c2d");
+        let title = chart.titles.create();
+        title.text = this.state.selection;
+        title.align = "center";
+        title.fontSize = 20;
+        title.fontWeight = "800";
 
         
         this.chart = chart;
@@ -63,10 +76,10 @@ class Condition extends Component {
         selection: "Hypertension",
         data: [{
           "status": "Normally recovered",
-          "value": 54
+          "value": 70
         }, {
           "status": "Did not normally recover",
-          "value": 46
+          "value": 70
         }]
       });
       this.componentDidUpdate();
@@ -117,13 +130,14 @@ class Condition extends Component {
     render() {
       return (
         <div>
-          <DropdownButton id="dropdown-item-button" title={this.state.selection}>
+          <h2>Lasting Effects based on Pre-Existing Health Conditions</h2>
+          <DropdownButton id="dropdown-item-button" className="selection" title={this.state.selection}>
             <Dropdown.Item as="button" onClick={() => this.setHypertension()}>Hypertension</Dropdown.Item>
             <Dropdown.Item as="button" onClick={() => this.setObesity()}>Obesity</Dropdown.Item>
             <Dropdown.Item as="button" onClick={() => this.setPsychiatric()}>Psychiatric Condition</Dropdown.Item>
             <Dropdown.Item as="button" onClick={() => this.setImmuno()}>Immunosuppressive Condition</Dropdown.Item>
           </DropdownButton>
-          <div id="condition" style={{ width: "100%", height: "500px" }}></div>
+          <div id="condition" style={{height: "500px" }}></div>
         </div>
       );
     }

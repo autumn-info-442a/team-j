@@ -3,16 +3,24 @@ import React from 'react';
 import DiscreteSlider from './slider.js'
 import Mortality from './mortality';
 import Condition from './condition';
+import bootstrap from 'bootstrap';
 
 function health() {
     return(
-        <div>
-            <p>test</p>
-            <div id='timeline_slider'>
-                <DiscreteSlider />
+        <div class="container">
+            <div>
+                <div id='timeline_slider' className="viz">
+                    <DiscreteSlider />
+                </div>
             </div>
-            <div><Mortality></Mortality></div>
-            <div><Condition></Condition></div>
+            <div>
+                <div className="viz">
+                    <Mortality />
+                </div>
+                <div className="viz">
+                    <Condition />
+                </div>
+            </div>
       </div>
     );
 }

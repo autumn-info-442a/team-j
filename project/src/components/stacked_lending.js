@@ -93,7 +93,7 @@ class StackedLending extends Component {
   
     render() {
       return (
-        <div id="stacked_lending" style={{height: "1000px" }}></div>
+        <div id="stacked_lending"></div>
       );
     }
   }

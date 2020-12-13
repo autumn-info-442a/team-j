@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: lightgray;
 }
 
 .App-logo {
@@ -52,4 +53,15 @@ nav{
   justify-content: space-around;
   align-items: center;
   list-style: none;
+}
+
+.selection {
+  align-items: left;
+  margin-left: 70%;
+}
+
+.viz {
+  background-color: white;
+  border: 2em solid lightgrey;
+  padding: 2em;
 }

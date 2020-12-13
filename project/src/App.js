@@ -4,6 +4,7 @@ import Nav from './components/Nav';
 import health from './components/health';
 import economics from './components/economics';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import bootstrap from 'bootstrap';
 
 class App extends React.Component{
   constructor(props) {

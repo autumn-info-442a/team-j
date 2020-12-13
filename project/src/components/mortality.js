@@ -171,12 +171,13 @@ class Mortality extends Component {
   render() {
     return (
       <div>
-        <DropdownButton id="dropdown-item-button" title={this.state.selection}>
+        <h2>Mortality Rate by {this.state.selection}</h2>
+        <DropdownButton id="dropdown-item-button" className="selection" title={this.state.selection}>
           <Dropdown.Item as="button" onClick={() => this.setAge()}>Age Group</Dropdown.Item>
           <Dropdown.Item as="button" onClick={() => this.setSex()}>Sex</Dropdown.Item>
           <Dropdown.Item as="button" onClick={() => this.setEthnicity()}>Race/Ethnicity</Dropdown.Item>
         </DropdownButton>
-        <div id="mortality" style={{ width: "100%", height: "500px" }}></div>
+        <div id="mortality" style={{height: "500px" }}></div>
       </div>
     );
   }
