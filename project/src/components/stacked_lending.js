@@ -70,17 +70,18 @@ class StackedLending extends Component {
         labelBullet.label.fill = am4core.color("#fff");
         }
 
-        createSeries("Utilized Lending", "Utilized Lending", "Utilized Lending: \nThe amount an agency paid toward an obligation. Outlays are also counted as obligations.", 30, 30, 0, 0);
-        createSeries("Available Lending", "Available Lending", "Available Lending: \nThe amount funded to an agency but not yet obligated.", 0, 0, 30, 30);
+        createSeries("Utilized Lending", "Utilized Lending", "Utilized Lending: \nThe CARES Act and other supplemental legislation are providing financial relief in response to the pandemic through agency funding, tax deferrals, and lending.", 30, 30, 0, 0);
+        createSeries("Available Lending", "Available Lending", "Available Lending: \nAllocated lending that has not been used yet.", 0, 0, 30, 30);
   
         let subtitle = test.titles.create();
-        subtitle.text = "Test";
+        subtitle.text = "Total Estimated Lending";
         subtitle.align = "left";
         let title = test.titles.create();
-        title.text = "OwO";
+        title.text = "Spending on COVID-19 relief budget breakdown in the USA";
         title.align = "left";
         title.fontSize = 20;
         title.fontWeight = "800";
+        title.fill = "#FFFFFF";
         this.test = test;
       
     }
