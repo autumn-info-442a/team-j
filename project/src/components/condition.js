@@ -36,6 +36,9 @@ class Condition extends Component {
         var chart = am4core.create("condition", am4charts.PieChart);
 
         chart.data = this.state.data;
+
+        // Chart padding
+        chart.padding(50, 70, 50, 50);
         
 
         let pieSeries = chart.series.push(new am4charts.PieSeries());

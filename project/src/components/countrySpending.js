@@ -63,6 +63,7 @@ class countrySpending extends Component {
     let valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
     valueAxis.renderer.grid.template.disabled = true;
     valueAxis.max = 100;
+    valueAxis.renderer.minGridDistance = 10;
 
 
     // Create series
@@ -90,7 +91,7 @@ class countrySpending extends Component {
     // Title 
     let subtitle = chart.titles.create();
     let title = chart.titles.create();
-    title.text = "Spending on COVID-19 relief across countries";
+    title.text = "Spending on COVID-19 Relief Across Countries";
     title.align = "left";
     title.fontSize = 20;
     title.fontWeight = "800";
