@@ -63,10 +63,18 @@
   color: black;
 }
 
-#timeline_slider, #chartdiv, #stacked_lending, #word_cloud, #country_spending {
+#timeline_slider, #stacked_lending, #word_cloud, #chartdiv, #country_spending {
   background: white;
   margin: 30px;
   padding: 30px;
+}
+
+#chartdiv {
+  margin-bottom: 0;
+}
+
+#stacked_lending {
+  margin-top: 0;
 }
 
 #mortality_bar, .condition {
