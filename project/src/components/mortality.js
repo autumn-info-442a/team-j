@@ -58,6 +58,9 @@ class Mortality extends Component {
     var chart = am4core.create("mortality", am4charts.XYChart);
 
     chart.data = this.state.data;
+
+    // Chart padding
+    chart.padding(50, 70, 50, 50);
     
     // Specify bar color
     chart.colors.list = [
@@ -73,6 +76,7 @@ class Mortality extends Component {
     var valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
     valueAxis.renderer.grid.template.disabled = true;
     valueAxis.max = 100;
+    valueAxis.renderer.minGridDistance = 10;
 
     var series = chart.series.push(new am4charts.ColumnSeries());
     series.dataFields.valueX = "value";
@@ -195,7 +199,7 @@ class Mortality extends Component {
           <Dropdown.Item as="button" onClick={() => this.setSex()}>Sex</Dropdown.Item>
           <Dropdown.Item as="button" onClick={() => this.setEthnicity()}>Race/Ethnicity</Dropdown.Item>
         </DropdownButton>
-        <div id="mortality" style={{ width: "100%", height: "500px" }}></div>
+        <div id="mortality" style={{width: "100%", height: "500px" }}></div>
       </div>
     );
   }

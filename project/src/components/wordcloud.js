@@ -11,6 +11,7 @@ class Chart extends Component {
   componentDidMount() {
     let chart = am4core.create("wordCloud", am4plugins_wordCloud.WordCloud);
     let series = chart.series.push(new am4plugins_wordCloud.WordCloudSeries());
+    chart.padding(50, 70, 50, 50);
     series.randomness = 0.1;
     series.rotationThreshold = 0.5;
     series.excludeWords = ["the", "an", "to"];
@@ -90,14 +91,20 @@ class Chart extends Component {
     // series.labels.template.url = "https://stackoverflow.com/questions/tagged/{word}";
     series.labels.template.urlTarget = "_blank";
     series.labels.template.tooltipText = "Total {word} Jobs Lost in USA due to COVID-19:\n[bold]{value}[/]";
+    series.tooltip.getFillFromObject = false;
+    series.tooltip.background.fill = am4core.color("#333333");
+    series.tooltip.background.filters.clear();
+    series.tooltip.background.stroke = am4core.color("#333333");
     series.labels.template.fill = am4core.color("#9F6BA0");
 
+    // Title 
     let subtitle = chart.titles.create();
-    subtitle.text = "hover over to see details";
     let title = chart.titles.create();
-    title.text = "Job Loss word cloud";
+    title.text = "Types and Numbers of Jobs Lost";
+    title.align = "left";
     title.fontSize = 20;
-    title.fontWeight = "800";
+    title.fontWeight = "800";    
+    
     this.chart = chart;
   }
 
