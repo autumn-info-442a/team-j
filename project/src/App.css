@@ -103,3 +103,16 @@
 .econ {
   width: 100%;
 }
+
+.slider_title {
+  font-size: large;
+  font-weight: bold;
+  color: black;
+}
+
+.slider_background {
+  background-image: url("./background.png") ;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 25px 185px;
+}
