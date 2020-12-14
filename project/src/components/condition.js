@@ -17,6 +17,7 @@ class Condition extends Component {
   
       this.state = {
         selection: "Hypertension",
+        text: "46% of patients did not return to usual state of health after 14-21 days tested positive for COVID-19",
         data: [{
           "status": "Normally recovered",
           "value": 54
@@ -67,6 +68,7 @@ class Condition extends Component {
 
         // Title 
         let subtitle = chart.titles.create();
+        subtitle.text = this.state.text;
         let title = chart.titles.create();
         title.text = "Lasting effects based on pre-exisiting health conditions";
         title.align = "left";
@@ -85,12 +87,13 @@ class Condition extends Component {
     setHypertension() {
       this.setState({
         selection: "Hypertension",
+        text: "48% of patients did not return to usual state of health after 14-21 days tested positive for COVID-19",
         data: [{
           "status": "Normally recovered",
-          "value": 54
+          "value": 52
         }, {
           "status": "Did not normally recover",
-          "value": 46
+          "value": 48
         }]
       });
       this.componentDidUpdate();
@@ -99,12 +102,13 @@ class Condition extends Component {
     setObesity() {
       this.setState({
         selection: "Obesity",
+        text: "45% of patients did not return to usual state of health after 14-21 days tested positive for COVID-19",
         data: [{
           "status": "Normally recovered",
-          "value": 58
+          "value": 45
         }, {
           "status": "Did not normally recover",
-          "value": 42
+          "value": 55
         }]
       });
       this.componentDidUpdate();
@@ -113,12 +117,13 @@ class Condition extends Component {
     setPsychiatric() {
       this.setState({
         selection: "Psychiatric Condition",
+        text: "47% of patients did not return to usual state of health after 14-21 days tested positive for COVID-19",
         data: [{
           "status": "Normally recovered",
-          "value": 48
+          "value": 47
         }, {
           "status": "Did not normally recover",
-          "value": 52
+          "value": 53
         }]
       });
       this.componentDidUpdate();
@@ -127,12 +132,13 @@ class Condition extends Component {
     setImmuno() {
       this.setState({
         selection: "Immunosuppressive Condition",
+        text: "42% of patients did not return to usual state of health after 14-21 days tested positive for COVID-19",
         data: [{
           "status": "Normally recovered",
-          "value": 42
+          "value": 40
         }, {
           "status": "Did not normally recover",
-          "value": 58
+          "value": 60
         }]
       });
       this.componentDidUpdate();
