@@ -110,9 +110,13 @@
   color: black;
 }
 
+.location {
+  left: 100px;
+}
+
 .slider_background {
   background-image: url("./background.png") ;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: 25px 185px;
+  background-position: 60px 161px;
 }

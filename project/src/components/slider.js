@@ -8,16 +8,16 @@ import '../App.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: 925 + theme.spacing(3) * 2,
+    width: 865 + theme.spacing(3) * 2,
   },
   margin: {
-    height: theme.spacing(2.3),
+    height: theme.spacing(1),
   },
 }));
 
 const useStyles_shorter = makeStyles((theme) => ({
   root: {
-    width: 315 + theme.spacing(3) * 2,
+    width: 285 + theme.spacing(3) * 2,
   },
   margin: {
     height: theme.spacing(2),
@@ -107,15 +107,15 @@ const mild_marks = [
 
 const PrettoSlider = withStyles({
   root: {
-    color: '#C9C9C9',
-    opacity: 0.7,
+    color: '#FFFFFF',
+    opacity: 0.25,
     height: 6.5,
   },
   thumb: {
     height: 24,
     width: 24,
-    backgroundColor: '#C9C9C9',
-    border: '2px solid currentColor',
+    backgroundColor: '#000000',
+    border: '2px solid #000000',
     marginTop: -8,
     marginLeft: -12,
     '&:focus, &:hover, &$active': {
@@ -143,22 +143,19 @@ export default function CustomizedSlider() {
   const shorter_classes = useStyles_shorter();
 
   return (
-    <div className="slider_background">
+    <div className="slider_background location">
       <div className={shorter_classes.root}>
         <p className="slider_title">Infection Timeline</p>
-        <Typography gutterBottom>Mild</Typography>
+        {/* <Typography gutterBottom>Mild</Typography> */}
         <PrettoSlider valueLabelDisplay="auto" ValueLabelComponent={mild_ValueLabelComponent} aria-label="custom thumb label" defaultValue={50} marks={mild_marks} valueLabelDisplay="auto" step={null}/>
+        <Typography gutterBottom>Mild</Typography>
         <div className={shorter_classes.margin} />
-        {/* <Typography gutterBottom>Severe</Typography>
-        <PrettoSlider valueLabelDisplay="auto" ValueLabelComponent={ValueLabelComponent} aria-label="custom thumb label" defaultValue={15} marks={marks} valueLabelDisplay="auto" step={null}/> */}
       </div>
       <div className={classes.root}>
-        {/* <p className="slider_title">Infection Timeline</p>
-        <Typography gutterBottom>Mild</Typography>
-        <PrettoSlider valueLabelDisplay="auto" ValueLabelComponent={mild_ValueLabelComponent} aria-label="custom thumb label" defaultValue={50} marks={mild_marks} valueLabelDisplay="auto" step={null}/> */}
         <div className={classes.margin} />
-        <Typography gutterBottom>Severe</Typography>
+        {/* <Typography gutterBottom>Severe</Typography> */}
         <PrettoSlider valueLabelDisplay="auto" ValueLabelComponent={ValueLabelComponent} aria-label="custom thumb label" defaultValue={15} marks={marks} valueLabelDisplay="auto" step={null}/>
+        <Typography gutterBottom>Severe</Typography>
       </div>
     </div>
   );
