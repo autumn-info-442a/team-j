@@ -68,12 +68,9 @@ class Condition extends Component {
 
         // Title 
         let subtitle = chart.titles.create();
-        subtitle.text = this.state.text;
-        let title = chart.titles.create();
-        title.text = "Lasting effects based on pre-exisiting health conditions";
-        title.align = "left";
-        title.fontSize = 20;
-        title.fontWeight = "800";
+        subtitle.text = this.state.data[1].value + "% of patients did not return to a usual state of health 14-21 \n days after testing positive for COVID-19";
+        subtitle.align = "center";
+        subtitle.fill = am4core.color("#FF9C00");
         
         this.chart = chart;
     }
@@ -96,6 +93,10 @@ class Condition extends Component {
           "value": 48
         }]
       });
+      document.getElementById("hypertension").classList.add("active");
+      document.getElementById("obesity").classList.remove("active");
+      document.getElementById("immuno").classList.remove("active");
+      document.getElementById("psychiatric").classList.remove("active");
       this.componentDidUpdate();
     }
   
@@ -111,6 +112,10 @@ class Condition extends Component {
           "value": 55
         }]
       });
+      document.getElementById("obesity").classList.add("active");
+      document.getElementById("psychiatric").classList.remove("active");
+      document.getElementById("immuno").classList.remove("active");
+      document.getElementById("hypertension").classList.remove("active");
       this.componentDidUpdate();
     }
   
@@ -126,6 +131,10 @@ class Condition extends Component {
           "value": 53
         }]
       });
+      document.getElementById("psychiatric").classList.add("active");
+      document.getElementById("obesity").classList.remove("active");
+      document.getElementById("immuno").classList.remove("active");
+      document.getElementById("hypertension").classList.remove("active");
       this.componentDidUpdate();
     }
   
@@ -141,19 +150,25 @@ class Condition extends Component {
           "value": 60
         }]
       });
+      document.getElementById("immuno").classList.add("active");
+      document.getElementById("obesity").classList.remove("active");
+      document.getElementById("psychiatric").classList.remove("active");
+      document.getElementById("hypertension").classList.remove("active");
       this.componentDidUpdate();
     }
   
     render() {
       return (
         <div className="condition">
-          <DropdownButton id="dropdown-item-button" title={this.state.selection}>
-            <Dropdown.Item as="button" onClick={() => this.setHypertension()}>Hypertension</Dropdown.Item>
-            <Dropdown.Item as="button" onClick={() => this.setObesity()}>Obesity</Dropdown.Item>
-            <Dropdown.Item as="button" onClick={() => this.setPsychiatric()}>Psychiatric Condition</Dropdown.Item>
-            <Dropdown.Item as="button" onClick={() => this.setImmuno()}>Immunosuppressive Condition</Dropdown.Item>
+          <h2 className="title">Lasting Effects based on Pre-Existing Health Conditions</h2>
+          <DropdownButton id="dropdown-item-button" title={this.state.selection} className="selection">
+            <Dropdown.Item id="hypertension" className="active" as="button" onClick={() => this.setHypertension()}>Hypertension</Dropdown.Item>
+            <Dropdown.Item id="obesity" as="button" onClick={() => this.setObesity()}>Obesity</Dropdown.Item>
+            <Dropdown.Item id="psychiatric" as="button" onClick={() => this.setPsychiatric()}>Psychiatric Condition</Dropdown.Item>
+            <Dropdown.Item id="immuno" as="button" onClick={() => this.setImmuno()}>Immunosuppressive Condition</Dropdown.Item>
           </DropdownButton>
           <div id="condition" style={{ width: "100%", height: "500px" }}></div>
+          <h3 className="condName">{this.state.selection}</h3>
         </div>
       );
     }

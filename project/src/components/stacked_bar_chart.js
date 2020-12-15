@@ -27,8 +27,8 @@ class Test extends Component {
 
         // Add legend
         test.legend = new am4charts.Legend();
-        test.legend.position = "right";
-        test.legend.height = 1000;
+        // test.legend.position = "right";
+        test.legend.maxHeight = 300;
 
         // Create axes
         let categoryAxis = test.yAxes.push(new am4charts.CategoryAxis());
@@ -59,6 +59,7 @@ class Test extends Component {
         series.tooltip.background.fill = am4core.color("#333333");
         series.tooltip.background.filters.clear();
         series.tooltip.background.stroke = am4core.color("#333333");
+        series.tooltip.pointerOrientation = "up";
         series.columns.template.column.cornerRadiusTopLeft = cornerTopLeft;
         series.columns.template.column.cornerRadiusBottomLeft = cornerBottomLeft;
         series.columns.template.column.cornerRadiusTopRight = cornerTopRight;
@@ -96,7 +97,7 @@ class Test extends Component {
   
     render() {
       return (
-        <div id="chartdiv" style={{height: "1000px" }}></div>
+        <div id="chartdiv"></div>
       );
     }
   }
