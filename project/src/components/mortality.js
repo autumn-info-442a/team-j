@@ -76,6 +76,7 @@ class Mortality extends Component {
     var valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
     valueAxis.renderer.grid.template.disabled = true;
     valueAxis.max = 100;
+    valueAxis.min = 0;
     valueAxis.renderer.minGridDistance = 10;
 
     var series = chart.series.push(new am4charts.ColumnSeries());
@@ -87,19 +88,19 @@ class Mortality extends Component {
     series.tooltip.background.filters.clear();
     series.tooltip.background.stroke = am4core.color("#333333");
 
-    //let valueLabel = series.bullets.push(new am4charts.LabelBullet());
-    //valueLabel.label.text = "{value}%";
-    //valueLabel.label.horizontalCenter = "left";
-    //valueLabel.label.dx = 10;
-    //valueLabel.label.minWidth = 1000;
+    let valueLabel = series.bullets.push(new am4charts.LabelBullet());
+    valueLabel.label.text = "{value}%";
+    valueLabel.label.horizontalCenter = "left";
+    valueLabel.label.dx = 10;
+    valueLabel.label.minWidth = 1000;
 
     // Title 
-    let subtitle = chart.titles.create();
-    let title = chart.titles.create();
-    title.text = "Mortality Rate by Demographics";
-    title.align = "left";
-    title.fontSize = 20;
-    title.fontWeight = "800";
+    // let subtitle = chart.titles.create();
+    // let title = chart.titles.create();
+    // title.text = "Mortality Rate by Demographics";
+    // title.align = "left";
+    // title.fontSize = 20;
+    // title.fontWeight = "800";
 
     this.chart = chart;
   }
@@ -145,6 +146,9 @@ class Mortality extends Component {
         "value": 0.00018
       }]
     });
+    document.getElementById("age").classList.add("active");
+    document.getElementById("race").classList.remove("active");
+    document.getElementById("sex").classList.remove("active");
     this.componentDidUpdate();
   }
 
@@ -159,6 +163,9 @@ class Mortality extends Component {
         "value": 45.9
       }]
     });
+    document.getElementById("sex").classList.add("active");
+    document.getElementById("age").classList.remove("active");
+    document.getElementById("race").classList.remove("active");
     this.componentDidUpdate();
   }
 
@@ -188,18 +195,25 @@ class Mortality extends Component {
       "value": 0.9
     }]
     });
+    document.getElementById("race").classList.add("active");
+    document.getElementById("age").classList.remove("active");
+    document.getElementById("sex").classList.remove("active");
     this.componentDidUpdate();
   }
 
   render() {
     return (
       <div id="mortality_bar">
-        <DropdownButton id="dropdown-item-button" title={this.state.selection}>
-          <Dropdown.Item as="button" onClick={() => this.setAge()}>Age Group</Dropdown.Item>
-          <Dropdown.Item as="button" onClick={() => this.setSex()}>Sex</Dropdown.Item>
-          <Dropdown.Item as="button" onClick={() => this.setEthnicity()}>Race/Ethnicity</Dropdown.Item>
-        </DropdownButton>
-        <div id="mortality" style={{width: "100%", height: "500px" }}></div>
+        <h2 className="title">Mortality Rate by Demographic</h2>
+        <div class="row">
+          <h3 className="mortName">{this.state.selection}</h3>
+          <DropdownButton id="dropdown-item-button" title={this.state.selection} className="selection">
+            <Dropdown.Item id="age" className="active" as="button" onClick={() => this.setAge()}>Age Group</Dropdown.Item>
+            <Dropdown.Item id="sex" as="button" onClick={() => this.setSex()}>Sex</Dropdown.Item>
+            <Dropdown.Item id="race" as="button" onClick={() => this.setEthnicity()}>Race/Ethnicity</Dropdown.Item>
+          </DropdownButton>
+        </div>
+        <div id="mortality" style={{width: "100%", height: "600px" }}></div>
       </div>
     );
   }
