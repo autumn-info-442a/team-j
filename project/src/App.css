@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 .App {
   background-color: #F1F4F6;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
 }
 
 .App-logo {
@@ -65,8 +69,12 @@
 
 #timeline_slider, #stacked_lending, #word_cloud, #chartdiv, #country_spending, .reference {
   background: white;
-  margin: 30px;
+  margin: 20px;
   padding: 30px;
+}
+
+.reference {
+  font-size: 14px;
 }
 
 #chartdiv {
@@ -81,9 +89,12 @@
 
 #mortality_bar, .condition {
   background: white;
-  margin: 30px;
+  margin: 20px;
   padding: 30px;
-  /*width: 100%;*/
+  padding-bottom: 50px;
+  width: 47%;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .content {
@@ -102,16 +113,22 @@
 
 .selection {
   margin-top: 2%;
-  margin-left: 65%;
+  float: right;
 }
 
-.title, .condName {
-  text-align: center;
+.title {
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
 }
 
 .condName {
   margin-top: -3%;
   margin-right: 1%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .mortName {
@@ -126,15 +143,18 @@
   font-size: large;
   font-weight: bold;
   color: black;
+  margin-bottom: 20px;
 }
 
-.location {
-  left: 100px;
+#slider {
+  margin-left: 20px;
+  margin-top: 30px;
 }
 
-.slider_background {
-  background-image: url("./backgound.jpg") ;
+/* .slider_background {
+  background-image: url("./bg.png") ;
   background-repeat: no-repeat;
-  /* background-attachment: fixed; */
   background-position: 0px 7px;
-}
+  background-size: 860px;
+}  */
+

@@ -96,14 +96,6 @@ class Chart extends Component {
     series.tooltip.background.filters.clear();
     series.tooltip.background.stroke = am4core.color("#333333");
     series.labels.template.fill = am4core.color("#9F6BA0");
-
-    // Title 
-    let subtitle = chart.titles.create();
-    let title = chart.titles.create();
-    title.text = "Types and Numbers of Jobs Lost";
-    title.align = "left";
-    title.fontSize = 20;
-    title.fontWeight = "800";    
     
     this.chart = chart;
   }
@@ -116,7 +108,10 @@ class Chart extends Component {
 
   render() {
     return (
-      <div id="wordCloud" style={{ width: "100%", height: "500px" }}></div>
+      <div>
+        <h2 className="title">Types and Numbers of Job Lost</h2>
+        <div id="wordCloud" style={{ width: "100%", height: "500px" }}></div>
+      </div>
     );
   }
 }

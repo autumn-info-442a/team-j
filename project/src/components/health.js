@@ -11,8 +11,8 @@ function Health() {
                 <DiscreteSlider />
             </div>
             <div>
-                <div><Mortality></Mortality></div>
-                <div><Condition></Condition></div>
+                <Mortality />
+                <Condition />
             </div>
             <div className="reference">
                 <p>References</p>

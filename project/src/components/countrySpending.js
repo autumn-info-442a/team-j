@@ -88,13 +88,6 @@ class countrySpending extends Component {
     //valueLabel.label.fontWeight = "800"
     //valueLabel.label.fill = am4core.color("#fff");
 
-    // Title 
-    let subtitle = chart.titles.create();
-    let title = chart.titles.create();
-    title.text = "Spending on COVID-19 Relief Across Countries";
-    title.align = "left";
-    title.fontSize = 20;
-    title.fontWeight = "800";
     this.chart = chart;
   }
 
@@ -106,7 +99,10 @@ class countrySpending extends Component {
 
   render() {
     return (
-      <div id="spending" style={{ width: "100%", height: "500px" }}></div>
+      <div>
+        <h2 className="title">Spending on COVID-19 Relief Across Countries</h2>
+        <div id="spending" style={{ width: "100%", height: "500px" }}></div>
+      </div>
     );
   }
 }

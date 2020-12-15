@@ -71,13 +71,16 @@ class Mortality extends Component {
     categoryAxis.dataFields.category = "category";
     categoryAxis.renderer.grid.template.location = 0;
     categoryAxis.renderer.grid.template.disabled = true;
-
+    categoryAxis.title.text = this.state.selection;
+    categoryAxis.title.fontWeight = "bold";
 
     var valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
     valueAxis.renderer.grid.template.disabled = true;
     valueAxis.max = 100;
     valueAxis.min = 0;
     valueAxis.renderer.minGridDistance = 10;
+    valueAxis.title.text = "Percentage of Deaths";
+    valueAxis.title.fontWeight = "bold";
 
     var series = chart.series.push(new am4charts.ColumnSeries());
     series.dataFields.valueX = "value";
@@ -205,14 +208,11 @@ class Mortality extends Component {
     return (
       <div id="mortality_bar">
         <h2 className="title">Mortality Rate by Demographic</h2>
-        <div class="row">
-          <h3 className="mortName">{this.state.selection}</h3>
           <DropdownButton id="dropdown-item-button" title={this.state.selection} className="selection">
             <Dropdown.Item id="age" className="active" as="button" onClick={() => this.setAge()}>Age Group</Dropdown.Item>
             <Dropdown.Item id="sex" as="button" onClick={() => this.setSex()}>Sex</Dropdown.Item>
             <Dropdown.Item id="race" as="button" onClick={() => this.setEthnicity()}>Race/Ethnicity</Dropdown.Item>
           </DropdownButton>
-        </div>
         <div id="mortality" style={{width: "100%", height: "600px" }}></div>
       </div>
     );

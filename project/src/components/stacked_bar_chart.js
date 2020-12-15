@@ -85,6 +85,7 @@ class Test extends Component {
         title.align = "left";
         title.fontSize = 20;
         title.fontWeight = "800";
+        title.marginBottom = 10;
         this.test = test;
       
     }
