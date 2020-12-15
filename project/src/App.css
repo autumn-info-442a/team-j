@@ -115,8 +115,8 @@
 }
 
 .slider_background {
-  background-image: url("./background.png") ;
+  background-image: url("./backgound.jpg") ;
   background-repeat: no-repeat;
   /* background-attachment: fixed; */
-  background-position: 0px 5px;
+  background-position: 0px 7px;
 }
