@@ -71,10 +71,12 @@
 
 #chartdiv {
   margin-bottom: 0;
+  height: 250px;
 }
 
 #stacked_lending {
   margin-top: 0;
+  height: 250px;
 }
 
 #mortality_bar, .condition {
