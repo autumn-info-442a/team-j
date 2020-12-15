@@ -8,7 +8,7 @@ import '../App.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: 865 + theme.spacing(3) * 2,
+    width: 885 + theme.spacing(3) * 2,
   },
   margin: {
     height: theme.spacing(1),
@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
 
 const useStyles_shorter = makeStyles((theme) => ({
   root: {
-    width: 285 + theme.spacing(3) * 2,
+    width: 310 + theme.spacing(3) * 2,
   },
   margin: {
     height: theme.spacing(2),
@@ -108,7 +108,7 @@ const mild_marks = [
 const PrettoSlider = withStyles({
   root: {
     color: '#FFFFFF',
-    opacity: 0.25,
+    opacity: 0.3,
     height: 6.5,
   },
   thumb: {
