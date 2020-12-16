@@ -81,13 +81,6 @@ class countrySpending extends Component {
     });
     series.strokeWidth = 0;
 
-    //let valueLabel = series.bullets.push(new am4charts.LabelBullet());
-    //valueLabel.locationX = 0.5;
-    //valueLabel.label.text = "{value}%";
-    //valueLabel.label.fontSize = 15;
-    //valueLabel.label.fontWeight = "800"
-    //valueLabel.label.fill = am4core.color("#fff");
-
     this.chart = chart;
   }
 

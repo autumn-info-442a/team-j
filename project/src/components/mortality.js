@@ -97,14 +97,6 @@ class Mortality extends Component {
     valueLabel.label.dx = 10;
     valueLabel.label.minWidth = 1000;
 
-    // Title 
-    // let subtitle = chart.titles.create();
-    // let title = chart.titles.create();
-    // title.text = "Mortality Rate by Demographics";
-    // title.align = "left";
-    // title.fontSize = 20;
-    // title.fontWeight = "800";
-
     this.chart = chart;
   }
 
