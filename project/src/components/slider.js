@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 
 const useStyles_shorter = makeStyles((theme) => ({
   root: {
-    width: 300 + theme.spacing(3) * 2,
+    width: 380 + theme.spacing(3) * 2,
   },
   margin: {
     height: theme.spacing(2),
@@ -217,15 +217,18 @@ export default function CustomizedSlider() {
       <h2 className="title">Infection Timeline (1)</h2>
       <div id="slider">
         <div className={shorter_classes.root}>
-          {/* <p className="slider_title">Infection Timeline</p> */}
-          <Typography variant="subtitle1">Mild</Typography>
-          <PrettoSliderMild valueLabelDisplay="auto" ValueLabelComponent={mild_ValueLabelComponent} aria-label="custom thumb label" defaultValue={40} marks={mild_marks} valueLabelDisplay="auto" step={null}/>
+          <div className="mild">
+            <Typography variant="subtitle1" id="mild_subtitle">Mild</Typography>
+            <PrettoSliderMild valueLabelDisplay="auto" ValueLabelComponent={mild_ValueLabelComponent} aria-label="custom thumb label" defaultValue={40} marks={mild_marks} valueLabelDisplay="auto" step={null}/>
+          </div>
           <div className={shorter_classes.margin} />
         </div>
         <div className={classes.root}>
-          <div className={classes.margin} />
-          <Typography variant="subtitle1">Severe</Typography>
-          <PrettoSlider valueLabelDisplay="auto" ValueLabelComponent={ValueLabelComponent} aria-label="custom thumb label" defaultValue={15} marks={marks} valueLabelDisplay="auto" step={null}/>
+          <div className="severe">
+            <div className={classes.margin} />
+            <Typography variant="subtitle1" id="severe_subtitle">Severe</Typography>
+            <PrettoSlider valueLabelDisplay="auto" ValueLabelComponent={ValueLabelComponent} aria-label="custom thumb label" defaultValue={15} marks={marks} valueLabelDisplay="auto" step={null}/>
+          </div>
         </div>
       </div>
     </div>

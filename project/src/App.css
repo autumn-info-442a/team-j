@@ -157,3 +157,17 @@
   cursor: default;
 }
 
+.mild, .severe {
+  display: flex;
+  flex-direction: row;
+}
+
+#mild_subtitle {
+  margin: 10px;
+  margin-right: 85px;
+}
+
+#severe_subtitle {
+  margin: 10px;
+  margin-right: 60px;
+}
