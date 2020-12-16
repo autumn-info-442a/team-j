@@ -43,7 +43,7 @@ ValueLabelComponent.propTypes = {
 
 const marks = [
   {
-    value: 2,
+    value: 0,
     label: "Exposure",
     text: "Exposure to COVID-19"
   },
@@ -108,7 +108,7 @@ ValueLabelComponent.propTypes = {
 
 const mild_marks = [
   {
-    value: 2,
+    value: 0,
     label: "Exposure",
     text: "Exposure to COVID-19"
   },
