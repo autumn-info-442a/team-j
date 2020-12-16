@@ -1,15 +1,11 @@
 import './App.css';
-import React, {Component} from 'react';
+import React from 'react';
 import Nav from './components/Nav'; 
 import Health from './components/health';
 import Economics from './components/economics';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 class App extends React.Component{
-  constructor(props) {
-    super(props);
-  }
-
 
 render() {
   return (
