@@ -1,17 +1,15 @@
 import React from 'react';
 import '../App.css';
 import { Link } from 'react-router-dom'; 
-// import './App.css'; 
+
 class Nav extends React.Component {
 
     healthClick() {
-        console.log("health");
         document.getElementById("healthNav").classList.add("current");
         document.getElementById("ecoNav").classList.remove("current");
     };
 
     ecoClick() {
-        console.log("eco");
         document.getElementById("ecoNav").classList.add("current");
         document.getElementById("healthNav").classList.remove("current");
     };

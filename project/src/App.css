@@ -148,10 +148,12 @@
   margin-top: 30px;
 }
 
-/* .slider_background {
-  background-image: url("./bg.png") ;
-  background-repeat: no-repeat;
-  background-position: 0px 7px;
-  background-size: 860px;
-}  */
+.current {
+  background-color: #52C8FA;
+  border: 20px solid #52C8FA;
+  border-radius: 15px;
+  font-weight: bold;
+  pointer-events: none;
+  cursor: default;
+}
 
