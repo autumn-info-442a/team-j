@@ -132,7 +132,7 @@
   text-align: center;
 }
 
-.active {
+.active, .h2 {
   font-weight: bold;
 }
 
