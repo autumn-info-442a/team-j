@@ -81,7 +81,7 @@ class Test extends Component {
         subtitle.text = "COVID-19 Aid, Relief, and Economic Security Act (Cares Act)";
         subtitle.align = "left";
         let title = test.titles.create();
-        title.text = "Spending on COVID-19 relief budget breakdown in the USA";
+        title.text = "Spending on COVID-19 relief budget breakdown in the USA (1)";
         title.align = "left";
         title.fontSize = 20;
         title.fontWeight = "800";
@@ -98,7 +98,9 @@ class Test extends Component {
   
     render() {
       return (
-        <div id="chartdiv"></div>
+        <div>
+          <div id="chartdiv"></div>
+        </div>
       );
     }
   }

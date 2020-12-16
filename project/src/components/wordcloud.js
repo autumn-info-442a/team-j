@@ -109,7 +109,7 @@ class Chart extends Component {
   render() {
     return (
       <div>
-        <h2 className="title">Types and Numbers of Job Lost</h2>
+        <h2 className="title">Types and Numbers of Job Lost (3, 4)</h2>
         <div id="wordCloud" style={{ width: "100%", height: "500px" }}></div>
       </div>
     );

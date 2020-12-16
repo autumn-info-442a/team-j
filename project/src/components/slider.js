@@ -213,7 +213,7 @@ export default function CustomizedSlider() {
 
   return (
     <div>
-      <h2 className="title">Infection Timeline</h2>
+      <h2 className="title">Infection Timeline (1)</h2>
       <div id="slider">
         <div className={shorter_classes.root}>
           {/* <p className="slider_title">Infection Timeline</p> */}

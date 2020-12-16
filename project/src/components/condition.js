@@ -17,13 +17,12 @@ class Condition extends Component {
   
       this.state = {
         selection: "Hypertension",
-        text: "46% of patients did not return to usual state of health after 14-21 days tested positive for COVID-19",
         data: [{
           "status": "Normally recovered",
-          "value": 54
+          "value": 33
         }, {
           "status": "Did not normally recover",
-          "value": 46
+          "value": 31
         }]
       }
     }
@@ -68,7 +67,7 @@ class Condition extends Component {
 
         // Title 
         let subtitle = chart.titles.create();
-        subtitle.text = this.state.data[1].value + "% of patients did not return to a usual state of health 14-21 \n days after testing positive for COVID-19";
+        subtitle.text = (this.state.data[1].value / (this.state.data[1].value + this.state.data[0].value) * 100) + "% of patients did not return to a usual state of health 14-21 \n days after testing positive for COVID-19";
         subtitle.align = "center";
         subtitle.fill = am4core.color("#FF9C00");
         
@@ -84,13 +83,12 @@ class Condition extends Component {
     setHypertension() {
       this.setState({
         selection: "Hypertension",
-        text: "48% of patients did not return to usual state of health after 14-21 days tested positive for COVID-19",
         data: [{
           "status": "Normally recovered",
-          "value": 52
+          "value": 33
         }, {
           "status": "Did not normally recover",
-          "value": 48
+          "value": 31
         }]
       });
       document.getElementById("hypertension").classList.add("active");
@@ -103,13 +101,12 @@ class Condition extends Component {
     setObesity() {
       this.setState({
         selection: "Obesity",
-        text: "45% of patients did not return to usual state of health after 14-21 days tested positive for COVID-19",
         data: [{
           "status": "Normally recovered",
-          "value": 45
+          "value": 23
         }, {
           "status": "Did not normally recover",
-          "value": 55
+          "value": 28
         }]
       });
       document.getElementById("obesity").classList.add("active");
@@ -122,13 +119,12 @@ class Condition extends Component {
     setPsychiatric() {
       this.setState({
         selection: "Psychiatric Condition",
-        text: "47% of patients did not return to usual state of health after 14-21 days tested positive for COVID-19",
         data: [{
           "status": "Normally recovered",
-          "value": 47
+          "value": 23
         }, {
           "status": "Did not normally recover",
-          "value": 53
+          "value": 26
         }]
       });
       document.getElementById("psychiatric").classList.add("active");
@@ -141,13 +137,12 @@ class Condition extends Component {
     setImmuno() {
       this.setState({
         selection: "Immunosuppressive Condition",
-        text: "42% of patients did not return to usual state of health after 14-21 days tested positive for COVID-19",
         data: [{
           "status": "Normally recovered",
-          "value": 40
+          "value": 6
         }, {
           "status": "Did not normally recover",
-          "value": 60
+          "value": 9
         }]
       });
       document.getElementById("immuno").classList.add("active");
@@ -160,7 +155,7 @@ class Condition extends Component {
     render() {
       return (
         <div className="condition">
-          <h2 className="title">Lasting Effects based on Pre-Existing Health Conditions</h2>
+          <h2 className="title">Lasting Effects based on Pre-Existing Health Conditions (3)</h2>
           <DropdownButton id="dropdown-item-button" title={this.state.selection} className="selection">
             <Dropdown.Item id="hypertension" className="active" as="button" onClick={() => this.setHypertension()}>Hypertension</Dropdown.Item>
             <Dropdown.Item id="obesity" as="button" onClick={() => this.setObesity()}>Obesity</Dropdown.Item>

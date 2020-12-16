@@ -93,7 +93,7 @@ class countrySpending extends Component {
   render() {
     return (
       <div>
-        <h2 className="title">Spending on COVID-19 Relief Across Countries</h2>
+        <h2 className="title">Spending on COVID-19 Relief Across Countries (2)</h2>
         <div id="spending" style={{ width: "100%", height: "500px" }}></div>
       </div>
     );

@@ -75,12 +75,7 @@ class StackedLending extends Component {
         let subtitle = test.titles.create();
         subtitle.text = "Total Estimated Lending";
         subtitle.align = "left";
-        let title = test.titles.create();
-        title.text = "Spending on COVID-19 relief budget breakdown in the USA";
-        title.align = "left";
-        title.fontSize = 20;
-        title.fontWeight = "800";
-        title.fill = "#FFFFFF";
+        
         this.test = test;
       
     }
