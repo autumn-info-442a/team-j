@@ -1,4 +1,7 @@
 # Requirements
+
+&nbsp;
+
 ## General Requirements:
 - **COMPLETE** This product should be a website that is open to anyone with internet access.
 - **COMPLETE** Users must be able to accomplish all the interactions on this website by accessing the website through a desktop or a laptop that has a mouse and/or touch screen.
@@ -12,6 +15,8 @@
 - **COMPLETE** Each chart should include the number corresponding to the data source used from the numbered reference list.  
 - **COMPLETE** All colors used for the graphs must use colorblind safe themes.
 
+&nbsp;
+
 ## 2. Navigation Bar:
 - **COMPLETE** Users must be able to access the health insights page with a single click/touch on the ‘health insights’ button in the navigation bar.
 - **COMPLETE** Users must be able to access the economic insights page with a single click/touch on the ‘economic insights’ button in the navigation bar.
@@ -20,6 +25,7 @@
 - **COMPLETE** The logo should be a static image.
 - **COMPLETE** The navigation bar should be positioned at the top of both pages (health insights and economic insights).
 
+&nbsp;
 
 ## 3. Bar graph of spending on covid relief across different countries:
 - **COMPLETE** The title should be at the top on its own line in bolded text.
@@ -29,7 +35,7 @@
 - **COMPLETE** The tooltip must show the specific percentage of spending as a percentage of the country’s GDP with text.
 - **COMPLETE** Each bar needs to be filled with a color specified as follows: Japan (Hex: #52C8FA), USA (Hex: #96AFFC), Australia (Hex: #3AAC99), Canada (Hex: #F7E55D), UK (Hex: #FF9C00), Columbia (Hex: #FF767C), Gambia (Hex: #FBD5C5).
 
-
+&nbsp;
 
 ## 4. Job Loss Word Cloud
 - **COMPLETE** The title should be at the top on its own line in a bolded text.
@@ -40,7 +46,7 @@
 - **COMPLETE** Larger words should be centered in the middle of the word cloud visualization. 
 - **COMPLETE** When users hover over an industry name, a dynamic tooltip label should appear above the hovered word and disappear when the user moves their mouse away from the industry name.
 
-
+&nbsp;
 
 ## 5. Infection Timeline Slider
 - **COMPLETE** The title should be at the top on its own line in a bolded text.
@@ -55,7 +61,7 @@
 - **COMPLETE** When users drag the slider across either mild or severe infection timeline instances, which should elicit a dynamic label above the slider that the user is currently dragging. 
 - **COMPLETE** Simultaneous interactions with the two sliders is not supported; users cannot be dragged two sliders at the same time and the content displayed by the sliders should be independent of each other. 
 
-
+&nbsp;
 
 ## 6. Mortality Rate by Demographics
 - **COMPLETE** The title should be at the top on its own line in a bolded text.
@@ -70,7 +76,7 @@
     * **New Requirement: When the menu is opened, the currently selected option should be highlighted.**
 - **COMPLETE** No data should be covered whenever the dropdown menu is opened.
 
-
+&nbsp;
 
 ## 7. Lasting effects based on pre-existing health conditions
 **Justification for switching from a waffle chart to a pie chart**:
@@ -92,6 +98,7 @@ After searching the amchart library for a waffle chart visualization type, we ca
 - **REVISED** When users hover over a section of the ~~waffle chart~~ **pie chart**, users should be able to see how the percentage was calculated (the sample size and number of patients in the recover/did not recover category).
 - **REVISED** When users move their mouse away from a hovered section of the ~~waffle chart~~ **pie chart**, the popup should fade out.
 
+&nbsp;
 
 ## 8. Spending on COVID-19 relief budget breakdown in the USA
 - **COMPLETE** The title should be at the top on its own line in a bolded text.
