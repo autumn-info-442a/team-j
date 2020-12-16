@@ -16,9 +16,9 @@ render() {
           <Switch>
             {/* health */}
             <Route path = "/team-j" exact component={Health} />
-            <Route path = "/health" component={Health} />
+            <Route path = "/team-j/health" component={Health} />
             {/* economic */}
-            <Route path = "/economics" component={Economics} />
+            <Route path = "/team-j/economics" component={Economics} />
           </Switch>  
         </div>
     </div>
