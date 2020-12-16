@@ -151,10 +151,15 @@
   margin-top: 30px;
 }
 
-/* .slider_background {
-  background-image: url("./bg.png") ;
-  background-repeat: no-repeat;
-  background-position: 0px 7px;
-  background-size: 860px;
-}  */
+.button {
+  padding: 15px 25px;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #52C8FA;
+  border: none;
+  border-radius: 45px;
+}
 
