@@ -2,25 +2,35 @@ import React from 'react';
 import '../App.css';
 import { Link } from 'react-router-dom'; 
 // import './App.css'; 
-    function Nav() {
+class Nav extends React.Component {
 
-        const navStyle = {
-            color: 'black'
-        }
+    healthClick() {
+        console.log("health");
+        document.getElementById("healthNav").classList.add("current");
+        document.getElementById("ecoNav").classList.remove("current");
+    };
 
+    ecoClick() {
+        console.log("eco");
+        document.getElementById("ecoNav").classList.add("current");
+        document.getElementById("healthNav").classList.remove("current");
+    };
+
+    render() {
         return( 
             <nav className="nav_bar">
                 <img src="https://i.ibb.co/QdxMM5k/covid-logo.png" alt="covid_logo"/>
                 <ul className="nav_links">
-                    <Link style={navStyle} to='/health'>
-                        <li>Health </li>
+                    <Link id="healthNav"  className="current" style={{color: "black"}} to='/health'>
+                        <a onClick={() => this.healthClick()}>Health</a>
                     </Link>
-                    <Link style={navStyle} to='/economics'>
-                        <li>Economics</li>
+                    <Link id="ecoNav" style={{color: "black"}} to='/economics'>
+                        <a onClick={() => this.ecoClick()}>Economics</a>
                     </Link>
                 </ul>
             </nav>
         );
     }
+}
 
 export default Nav;
