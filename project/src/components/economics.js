@@ -5,7 +5,13 @@ import StackedChart from './stacked_lending.js'
 import CountrySpending from './countrySpending';
 import Chart from './wordcloud.js'
 
-function Economics() {
+class Economics extends React.Component {
+  componentDidMount() {
+    document.getElementById("ecoNav").classList.add("current");
+    document.getElementById("healthNav").classList.remove("current");
+  }
+  
+  render() {
     return(
      <div className="econ">
         <div id="chartdiv">
@@ -31,6 +37,7 @@ function Economics() {
             </div>
      </div>
     );
+  }
 }
 
 export default Economics;
