@@ -1,5 +1,5 @@
-## Requirements
-### General Requirements:
+# Requirements
+## General Requirements:
 - **COMPLETE** This product should be a website that is open to anyone with internet access.
 - **COMPLETE** Users must be able to accomplish all the interactions on this website by accessing the website through a desktop or a laptop that has a mouse and/or touch screen.
 - **COMPLETE** The overall website should have 2 pages: one for health insights and another for economic insights.
@@ -12,7 +12,7 @@
 - **COMPLETE** Each chart should include the number corresponding to the data source used from the numbered reference list.  
 - **COMPLETE** All colors used for the graphs must use colorblind safe themes.
 
-### 2. Navigation Bar:
+## 2. Navigation Bar:
 - **COMPLETE** Users must be able to access the health insights page with a single click/touch on the ‘health insights’ button in the navigation bar.
 - **COMPLETE** Users must be able to access the economic insights page with a single click/touch on the ‘economic insights’ button in the navigation bar.
 - **COMPLETE** When the user is currently on the health insights page, the ‘health insights’ link in the navigation bar should be highlighted and should not respond to click or touch inputs.
@@ -21,7 +21,7 @@
 - **COMPLETE** The navigation bar should be positioned at the top of both pages (health insights and economic insights).
 
 
-### 3. Bar graph of spending on covid relief across different countries:
+## 3. Bar graph of spending on covid relief across different countries:
 - **COMPLETE** The title should be at the top on its own line in bolded text.
 - **COMPLETE** The y-axis should be 7 country names, including Japan, USA, Australia, Canada, UK, Columbia, Gambia, sorted in descending order based on the percentage of spending (x value).
 - **COMPLETE** The x-axis should be the COVID-19 relief spending as a percentage of each country’s GDP, incremented by 10% from 0% to 100%.
@@ -31,7 +31,7 @@
 
 
 
-### 4. Job Loss Word Cloud
+## 4. Job Loss Word Cloud
 - **COMPLETE** The title should be at the top on its own line in a bolded text.
 - **COMPLETE** Industry names should be in different sizes and the sizes should be correlated with the number of layoffs in that particular industry. Larger sized words should represent a higher number of layoffs and smaller sized words would conversely represent a lower number of layoffs. 
 - **COMPLETE** The industry names are all in Hex color #3AAC9 when in a non-hovered state.
@@ -42,7 +42,7 @@
 
 
 
-### 5. Infection Timeline Slider
+## 5. Infection Timeline Slider
 - **COMPLETE** The title should be at the top on its own line in a bolded text.
 - **COMPLETE** There should be two sliders: one titled mild and one titled severe. Labels are horizontally aligned with the slider timeline themselves and exist to the left of the slider.
 - **COMPLETE** The slider representing a mild case of Covid-19 infection is shorter than the severe slider, and should be exactly one third the length of the severe case of Covid-19 infection slider.
@@ -57,7 +57,7 @@
 
 
 
-### 6. Mortality Rate by Demographics
+## 6. Mortality Rate by Demographics
 - **COMPLETE** The title should be at the top on its own line in a bolded text.
 - **COMPLETE** The specific number of deaths should be shown in a pop-up when any individual bar is hovered.
 - **COMPLETE** The pop-up should fade out when the bar is no longer hovered.
@@ -72,8 +72,8 @@
 
 
 
-### 7. Lasting effects based on pre-existing health conditions
-**Justification for switching from a waffle chart to a pie chart**
+## 7. Lasting effects based on pre-existing health conditions
+**Justification for switching from a waffle chart to a pie chart**:
 After searching the amchart library for a waffle chart visualization type, we came to the conclusion that switching to a pie chart would work better than a waffle chart for a few reasons. First, there is no native support for a waffle chart in the library, meaning the only way to make one is effectively make a grid of rectangles and manually fill each piece with the desired color. Not only would this be extremely tedious and inefficient to code, it would also mean that our data would be unusable in its current state. The most important reason, however, is that the aforementioned implementation of the waffle chart does not support decimal percentages, instead having to round to the nearest whole percent. This does not accurately reflect the data in the way that we are trying to, and so we came to the conclusion that utilizing a pie chart would be the better alternative as it is natively supported by amcharts and is also capable of utilizing more precise, decimal percentages. As such, all mentions of a waffle chart from the original requirements have been changed to pie chart.
 
 
@@ -93,7 +93,7 @@ After searching the amchart library for a waffle chart visualization type, we ca
 - **REVISED** When users move their mouse away from a hovered section of the ~~waffle chart~~ **pie chart**, the popup should fade out.
 
 
-### 8. Spending on COVID-19 relief budget breakdown in the USA
+## 8. Spending on COVID-19 relief budget breakdown in the USA
 - **COMPLETE** The title should be at the top on its own line in a bolded text.
 - **COMPLETE** There should be 2 bar horizontal bar graphs that are divided into sections that represent how much has been spent by the United States in response to Covid-19.
 - **COMPLETE** When the user hovers over a section, a popup label should appear below in the hovered section. 
