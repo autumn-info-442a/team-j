@@ -18,10 +18,10 @@ class Condition extends Component {
       this.state = {
         selection: "Hypertension",
         data: [{
-          "status": "Normally recovered",
+          "status": "normally recovered",
           "value": 33
         }, {
-          "status": "Did not normally recover",
+          "status": "did not normally recover",
           "value": 31
         }]
       }
@@ -49,6 +49,7 @@ class Condition extends Component {
         pieSeries.slices.template.strokeOpacity = 1;
         pieSeries.labels.template.disabled = true;
         pieSeries.ticks.template.disabled = true;
+        pieSeries.calculatePercent = true;
 
         // Specify bar color
         pieSeries.colors.list = [
@@ -60,6 +61,7 @@ class Condition extends Component {
         pieSeries.tooltip.background.fill = am4core.color("#333333");
         pieSeries.tooltip.background.filters.clear();
         pieSeries.tooltip.background.stroke = am4core.color("#333333");
+        pieSeries.slices.template.tooltipText = "{value} out of " + (this.state.data[1].value + this.state.data[0].value) + " patients {category} ({value.percent}%)";
 
         pieSeries.hiddenState.properties.opacity = 1;
         pieSeries.hiddenState.properties.endAngle = -90;
@@ -84,10 +86,10 @@ class Condition extends Component {
       this.setState({
         selection: "Hypertension",
         data: [{
-          "status": "Normally recovered",
+          "status": "normally recovered",
           "value": 33
         }, {
-          "status": "Did not normally recover",
+          "status": "did not normally recover",
           "value": 31
         }]
       });
@@ -102,10 +104,10 @@ class Condition extends Component {
       this.setState({
         selection: "Obesity",
         data: [{
-          "status": "Normally recovered",
+          "status": "normally recovered",
           "value": 23
         }, {
-          "status": "Did not normally recover",
+          "status": "did not normally recover",
           "value": 28
         }]
       });
@@ -120,10 +122,10 @@ class Condition extends Component {
       this.setState({
         selection: "Psychiatric Condition",
         data: [{
-          "status": "Normally recovered",
+          "status": "normally recovered",
           "value": 23
         }, {
-          "status": "Did not normally recover",
+          "status": "did not normally recover",
           "value": 26
         }]
       });
@@ -138,10 +140,10 @@ class Condition extends Component {
       this.setState({
         selection: "Immunosuppressive Condition",
         data: [{
-          "status": "Normally recovered",
+          "status": "normally recovered",
           "value": 6
         }, {
-          "status": "Did not normally recover",
+          "status": "did not normally recover",
           "value": 9
         }]
       });
