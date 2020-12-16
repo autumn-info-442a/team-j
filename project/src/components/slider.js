@@ -50,7 +50,7 @@ const marks = [
   {
     value: 15,
     label:
-    <Typography>
+    <Typography component={"div"} >
       <pre style={{ fontFamily: 'inherit', textAlign: 'center'}}>
         5-6 Days<br />Symptoms Onset
       </pre>
@@ -80,7 +80,7 @@ const marks = [
   {
     value: 100,
     label:
-    <Typography>
+    <Typography component={"div"} >
       <pre style={{fontFamily: 'inherit', textAlign: 'center'}}>
         6 Weeks<br />Recovery
       </pre>
@@ -115,7 +115,7 @@ const mild_marks = [
   {
     value: 40,
     label:
-    <Typography>
+    <Typography component={"div"} >
       <pre style={{ fontFamily: 'inherit', textAlign: 'center'}}>
         5-6 Days<br />Symptoms Onset
       </pre>
@@ -125,7 +125,7 @@ const mild_marks = [
   {
     value: 98,
     label:
-    <Typography>
+    <Typography component={"div"} >
       <pre style={{fontFamily: 'inherit', textAlign: 'center'}}>
         2 Weeks<br />Recovery
       </pre>
